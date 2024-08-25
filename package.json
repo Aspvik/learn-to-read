@@ -1,0 +1,23 @@
+{
+  "name": "learn-to-read",
+  "version": "1.0.0",
+  "description": "Simple word generator",
+  "main": "lib/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "NODE_ENV=production node -r dotenv/config lib",
+    "dev": "nodemon -e js,env -r dotenv/config lib"
+  },
+  "author": "Rune Aspvik <aspvik@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^13.0.0",
+    "console-stamp": "^3.1.2",
+    "dotenv": "^16.4.5",
+    "edge.js": "^6.0.2",
+    "koa": "^2.15.3",
+    "koa-compose": "^4.1.0",
+    "koa-mount": "^4.0.0",
+    "koa-send": "^5.0.1"
+  }
+}
