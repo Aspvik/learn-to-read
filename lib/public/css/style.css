@@ -1,0 +1,13 @@
+body {
+  font-family       : sans-serif;
+  display           : grid;
+  grid-template-rows: auto 1fr auto;
+  min-height        : 100dvh;
+}
+
+footer {
+  min-height      : 4rem;
+  display         : grid;
+  place-items     : center;
+  background-color: #dedede;
+}
