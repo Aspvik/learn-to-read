@@ -1,13 +1,98 @@
+:root {
+  --page-max-width: 1280px;
+}
+
 body {
   font-family       : sans-serif;
   display           : grid;
   grid-template-rows: auto 1fr auto;
   min-height        : 100dvh;
+
+  &>* {
+    max-width: var(--page-max-width);
+    width    : 100%;
+    margin   : 0 auto;
+  }
+}
+
+header {
+  display         : flex;
+  align-items     : center;
+  gap             : 1rem;
+  background-color: whitesmoke;
+  padding         : 1rem;
+
+  & nav {
+    margin-left: auto;
+  }
+}
+
+main {
+  display       : flex;
+  flex-direction: column;
+  padding-block : 1rem;
+
+  &>* {
+    min-width     : 0;
+    padding-inline: 1rem;
+  }
 }
 
 footer {
-  min-height      : 4rem;
   display         : grid;
   place-items     : center;
-  background-color: #dedede;
+  padding         : 1rem;
+  background-color: whitesmoke;
+}
+
+section {
+  padding-block: 2rem;
+}
+
+/* NAV Special button */
+button {
+  align-self                : center;
+  background-color          : #fff;
+  background-image          : none;
+  background-position       : 0 90%;
+  background-repeat         : repeat no-repeat;
+  background-size           : 4px 3px;
+  border-style              : solid;
+  border-width              : 2px;
+  box-shadow                : rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  color                     : #41403e;
+  cursor                    : pointer;
+  display                   : inline-block;
+  font-family               : Neucha, sans-serif;
+  padding                   : 0.25rem 1rem;
+  text-decoration           : none;
+  transition                : all 75ms ease-in-out;
+  border-bottom-left-radius : 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius    : 255px 15px;
+  border-top-right-radius   : 15px 225px;
+  user-select               : none;
+  -webkit-user-select       : none;
+  touch-action              : manipulation;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform : translate3d(0, 2px, 0);
+  }
+
+  &:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.branding {
+  display: flex;
+
+  & img {
+    max-height: 4rem;
+  }
 }

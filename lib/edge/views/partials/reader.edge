@@ -1,0 +1,26 @@
+<style>
+  .reader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #c0dac4;
+
+    & .word {
+      font-size: 5rem;
+      font-family: Neucha, sans-serif;
+    }
+
+    & button {
+      font-size: 1.5rem;
+      padding: 1rem 2rem
+    }
+  }
+</style>
+
+<div class="reader">
+  <p id="word" class="word uppercase"></p>
+  <button onclick="setNextWord()" class="uppercase">Neste</button>
+</div>
