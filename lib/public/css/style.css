@@ -9,6 +9,7 @@ body {
   min-height        : 100dvh;
 
   &>* {
+    min-width: 0;
     max-width: var(--page-max-width);
     width    : 100%;
     margin   : 0 auto;
@@ -94,6 +95,10 @@ select {
   &:focus {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
   }
+}
+
+.wordlist-picker {
+  font-size: clamp(1rem, 1.5rem, 6vw);
 }
 
 .uppercase {
