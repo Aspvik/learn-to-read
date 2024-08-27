@@ -83,6 +83,7 @@ select {
     background-repeat  : no-repeat;
     background-position: right 5px top 50%;
     padding            : 0.3rem 1rem;
+    padding-right      : 1.5rem;
   }
 
   &:not(select):hover {
