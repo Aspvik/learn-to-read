@@ -24,6 +24,8 @@ header {
 
   & nav {
     margin-left: auto;
+    display    : flex;
+    gap        : 1rem;
   }
 }
 
@@ -50,13 +52,13 @@ section {
 }
 
 /* NAV Special button */
-button {
+button,
+select {
+  -moz-appearance           : none;
+  -webkit-appearance        : none;
+  appearance                : none;
   align-self                : center;
   background-color          : #fff;
-  background-image          : none;
-  background-position       : 0 90%;
-  background-repeat         : repeat no-repeat;
-  background-size           : 4px 3px;
   border-style              : solid;
   border-width              : 2px;
   box-shadow                : rgba(0, 0, 0, .2) 15px 28px 25px -18px;
@@ -74,8 +76,16 @@ button {
   user-select               : none;
   -webkit-user-select       : none;
   touch-action              : manipulation;
+  outline                   : none;
 
-  &:hover {
+  &:is(select) {
+    background-image   : url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/></svg>');
+    background-repeat  : no-repeat;
+    background-position: right 5px top 50%;
+    padding            : 0.3rem 1rem;
+  }
+
+  &:not(select):hover {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
     transform : translate3d(0, 2px, 0);
   }
@@ -87,6 +97,30 @@ button {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+}
+
+.text-sm {
+  font-size: .8rem;
+}
+
+.text-md {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.5rem;
+}
+
+.text-xlg {
+  font-size: 2rem;
 }
 
 .branding {
