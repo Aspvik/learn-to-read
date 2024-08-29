@@ -1,6 +1,14 @@
 :root {
-  --page-max-width : 1280px;
-  --bg-accent-color: #c0dac4;
+  --page-max-width   : 1280px;
+  --bg-color         : #f8f9f5;
+  --bg-accent-color  : #a2c3c8;
+  --bg-headfoot-color: #273f43;
+  --bg-headfoot-text : #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  color          : #222222;
 }
 
 body {
@@ -21,8 +29,9 @@ header {
   display         : flex;
   align-items     : center;
   gap             : 1rem;
-  background-color: whitesmoke;
   padding         : 1rem;
+  background-color: var(--bg-headfoot-color);
+  color           : var(--bg-headfoot-text);
 
   & nav {
     margin-left: auto;
@@ -32,9 +41,10 @@ header {
 }
 
 main {
-  display       : flex;
-  flex-direction: column;
-  padding-block : 1rem;
+  display         : flex;
+  flex-direction  : column;
+  padding-block   : 1rem;
+  background-color: var(--bg-color);
 
   &>* {
     min-width     : 0;
@@ -46,7 +56,8 @@ footer {
   display         : grid;
   place-items     : center;
   padding         : 1rem;
-  background-color: whitesmoke;
+  background-color: var(--bg-headfoot-color);
+  color           : var(--bg-headfoot-text);
 }
 
 section {
@@ -102,6 +113,20 @@ select {
   }
 }
 
+p {
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height : 1.2;
+  margin-block: 1em 0.8em
+}
+
 .wordlist-picker {
   font-size: clamp(1rem, 1.5rem, 6vw);
 }
@@ -112,6 +137,10 @@ select {
 
 .bold {
   font-weight: bold;
+}
+
+.mw-800 {
+  max-width: 800px;
 }
 
 .flex {
@@ -168,6 +197,10 @@ select {
 
 .py-4 {
   padding-block: 4rem;
+}
+
+.mx-auto {
+  margin-inline: auto;
 }
 
 .mx-1 {
