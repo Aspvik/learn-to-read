@@ -118,6 +118,10 @@ select {
   display: flex;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-sm {
   font-size: .8rem;
 }
@@ -138,6 +142,6 @@ select {
   display: flex;
 
   & img {
-    max-height: 4rem;
+    max-height: 6rem;
   }
 }
