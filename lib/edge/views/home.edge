@@ -2,7 +2,8 @@
 @component('components/layouts/main', {})
 
 {{-- Main slot (unnamed) --}}
-<section class="text-center">
+<section class="text-center relative">
+  <i title="Klikk for å ta bort instruksjonene" role="button" class="fa-sharp fa-solid fa-rectangle-xmark pointer close-button" onclick="this.parentElement.remove()"></i>
   <div class="mw-800 mx-auto">
     <h1 class="text-xlg">Velkommen til Ordmester.no 😎</h1>
     <p class="text-lg"><b>Vil du bli en ordmester?</b> Les ordene høyt. Trykk så på høyttaleren for å høre hvordan ordene skal sies. Når du er ferdig, trykker du på "NESTE".</p>

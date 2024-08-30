@@ -43,7 +43,6 @@ header {
 main {
   display         : flex;
   flex-direction  : column;
-  padding-block   : 1rem;
   background-color: var(--bg-color);
 
   &>* {
@@ -253,6 +252,32 @@ h6 {
 
 .text-xlg {
   font-size: 2rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.close-button {
+  color    : #333;
+  position : absolute;
+  top      : 1rem;
+  right    : 1rem;
+  font-size: 3rem;
+
+  &:hover {
+    filter: contrast(0.8);
+  }
+
+  /* When screen is smaller than 600px adjust the position */
+  @media (max-width: 600px) {
+    top  : 0.5rem;
+    right: 0.5rem;
+  }
 }
 
 .branding {
