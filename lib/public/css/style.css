@@ -4,11 +4,14 @@
   --bg-accent-color  : #a2c3c8;
   --bg-headfoot-color: #273f43;
   --bg-headfoot-text : #ffffff;
+  --text-color       : #222222;
+  --first-color      : #273f43;
+  --second-color     : #333333;
 }
 
 html {
   scroll-behavior: smooth;
-  color          : #222222;
+  color          : var(--text-color);
 }
 
 body {
@@ -234,6 +237,38 @@ h6 {
   margin-block: 4rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 2rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -263,7 +298,7 @@ h6 {
 }
 
 .close-button {
-  color    : #333;
+  color    : var(--second-color);
   position : absolute;
   top      : 1rem;
   right    : 1rem;

@@ -10,11 +10,25 @@
       font-family: Neucha, sans-serif;
       line-height: 1;
       word-spacing: 20px;
+      /* Prevent text selection */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      & span {
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+          color: var(--first-color);
+        }
+      }
     }
 
     & button {
       font-size: 1.5rem;
-      padding: 1rem 2rem
+      padding: 1rem 2rem;
     }
   }
 </style>
