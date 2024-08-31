@@ -6,8 +6,7 @@
     gap: 1rem;
 
     & .word {
-      font-size: min(5rem, 18vw);
-      font-family: Neucha, sans-serif;
+      font-size: min(5rem, 15vw);
       line-height: 1;
       word-spacing: 10px;
       /* Prevent text selection */
@@ -15,6 +14,10 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+
+      &.small-text {
+        font-size: 4rem;
+      }
 
       & span {
         cursor: pointer;
@@ -25,16 +28,25 @@
       }
     }
 
-    & button {
-      font-size: 1.5rem;
-      padding: 1rem 2rem;
+    & .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      width: 100%;
+      max-width: 400px;
+      gap: 1rem;
+
+      & button {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+      }
     }
+
   }
 </style>
 
 <div class="reader">
   <p id="word" class="word uppercase"></p>
-  <div class="flex gap-2">
+  <div class="controls">
     <button onclick="setNextWord()" class="uppercase">Neste</button>
     <button onclick="speak()" class="uppercase"><i class="fa-sharp fa-solid fa-volume-high"></i></button>
   </div>
