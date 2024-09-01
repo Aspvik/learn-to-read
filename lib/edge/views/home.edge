@@ -2,7 +2,7 @@
 @component('components/layouts/main', {})
 
 {{-- Main slot (unnamed) --}}
-<section class="text-center relative">
+<section class="text-center relative bg-accent">
   <i title="Klikk for å ta bort instruksjonene" role="button" class="fa-sharp fa-solid fa-rectangle-xmark pointer close-button" onclick="this.parentElement.remove()"></i>
   <div class="mw-800 mx-auto">
     <h1 class="text-xlg">Velkommen til Ordmester.no 😎</h1>
@@ -11,7 +11,7 @@
   </div>
 </section>
 
-<section class="bg-accent">
+<section class="">
   @include('partials/reader')
 </section>
 
