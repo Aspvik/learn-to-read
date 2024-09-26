@@ -7,11 +7,13 @@
   --text-color       : #222222;
   --first-color      : #273f43;
   --second-color     : #333333;
+  --accent-color     : #bfd5d9;
 }
 
 html {
   scroll-behavior: smooth;
   color          : var(--text-color);
+  accent-color   : var(--accent-color);
 }
 
 body {
@@ -129,12 +131,39 @@ h6 {
   margin-block: 1em 0.8em
 }
 
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.checkbox-lg {
+  width : 50px;
+  height: 50px;
+}
+
 .wordlist-picker {
   font-size: clamp(1rem, 1.5rem, 6vw);
 }
 
+.case-check {
+  position: relative;
+
+  &:not(:checked)::after {
+    content  : 'A/a';
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color    : #333;
+  }
+}
+
 .uppercase {
   text-transform: uppercase;
+}
+
+.twist {
+  rotate: -1deg;
 }
 
 .bold {
@@ -151,6 +180,18 @@ h6 {
 
 .grid {
   display: grid;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.place-center {
+  place-items: center;
 }
 
 .gap-1 {

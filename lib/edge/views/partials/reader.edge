@@ -1,4 +1,9 @@
 <style>
+  /* Uppercase entire .word if checkbox is checked */
+  body:has(.case-check:checked) p.word {
+    text-transform: uppercase;
+  }
+
   .reader {
     display: flex;
     flex-direction: column;
@@ -25,6 +30,11 @@
         &:hover {
           color: var(--first-color);
         }
+
+        /* Always capitalize first letter */
+        &:first-child {
+          text-transform: uppercase;
+        }
       }
     }
 
@@ -45,7 +55,7 @@
 </style>
 
 <div class="reader">
-  <p id="word" class="word uppercase"></p>
+  <p id="word" class="word"></p>
   <div class="controls">
     <button onclick="setNextWord()" class="uppercase">Neste</button>
     <button onclick="speak()" class="uppercase"><i class="fa-sharp fa-solid fa-volume-high"></i></button>

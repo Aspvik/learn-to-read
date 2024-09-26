@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "NODE_ENV=production node -r dotenv/config lib",
-    "dev": "nodemon -e js,env -r dotenv/config lib",
-    "compile": "sass lib/public/css/style.scss:lib/public/css/style.css"
+    "dev": "nodemon -e js,env -r dotenv/config lib & npm run watch",
+    "compile": "sass lib/public/css/style.scss:lib/public/css/style.css",
+    "watch": "sass --watch --style=compressed lib/public/css/style.scss:lib/public/css/style.css"
   },
   "author": "Rune Aspvik <aspvik@gmail.com>",
   "license": "ISC",
