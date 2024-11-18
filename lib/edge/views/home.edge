@@ -2,16 +2,23 @@
 @component('components/layouts/main', {})
 
 {{-- Main slot (unnamed) --}}
-<section class="text-center relative bg-accent">
-  <i title="Klikk for å ta bort instruksjonene" role="button" class="fa-sharp fa-solid fa-rectangle-xmark pointer close-button" onclick="this.parentElement.remove()"></i>
+<section class="text-center relative bg-accent" data-section="info">
   <div class="mw-800 mx-auto">
     <h1 class="text-xlg">Velkommen til Ordmester.no 😎</h1>
-    <p class="text-lg"><b>Vil du bli en ordmester?</b> Les ordene høyt. Trykk så på høyttaleren for å høre hvordan ordene skal sies. Når du er ferdig, trykker du på "NESTE".</p>
-    <p class="text-lg mt-2">PS! Du kan også trykke på en bokstav for å høre hva den heter.</p>
+    <p class="text-lg">
+      <b>Vil du bli en ordmester?</b>
+      Les ordene høyt. Trykk så på høyttaleren for å høre ordene opplest.
+      Når du er ferdig, trykker du på "NESTE".
+    </p>
+    <p class="text-lg mt-2">Fra menyen kan du velge hvilken ordliste du vil bruke, velg mellom matematikk, norske ord, engelsk ord og mange andre.</p>
+    <p class="text-lg mt-2">PS! Du kan også trykke på en bokstav eller et tall for å høre hva den heter.</p>
   </div>
+  <button class="uppercase btn-lg mt-3"
+          onclick="this.parentElement.remove()"
+          title="Klikk for å starte spillet">Start</button>
 </section>
 
-<section class="">
+<section data-section="game">
   @include('partials/reader')
 </section>
 

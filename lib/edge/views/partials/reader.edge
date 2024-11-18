@@ -39,26 +39,57 @@
       }
     }
 
+    & button {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+
+    & .options {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      padding-block: 1rem;
+
+      & button {
+        background-color: #8fbc8f;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      /* Hide if empty (no alternatives) */
+      &:empty {
+        display: none;
+
+        &+p {
+          display: none;
+        }
+      }
+    }
+
+    & .points {
+      font-size: 1.2rem;
+    }
+
     & .controls {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       width: 100%;
       max-width: 400px;
       gap: 1rem;
-
-      & button {
-        font-size: 1.5rem;
-        padding: 1rem 2rem;
-      }
+      padding-top: 2rem;
+      border-top: solid 2px #fff;
     }
-
   }
 </style>
 
 <div class="reader">
   <p id="word" class="word"></p>
+  <div id="options" class="options" data-type="options"></div>
+  <p class="points">Poeng: <b id="points">0</b></p>
   <div class="controls">
     <button onclick="setNextWord()" class="uppercase">Neste</button>
-    <button onclick="speak()" class="uppercase"><i class="fa-sharp fa-solid fa-volume-high"></i></button>
+    <button onclick="speak(dqs('#word').textContent)" class="uppercase"><i class="fa-sharp fa-solid fa-volume-high"></i></button>
   </div>
 </div>

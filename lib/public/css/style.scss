@@ -107,13 +107,18 @@ select {
     padding-right      : 1.5rem;
   }
 
-  &:not(select):hover {
+  &:not(select, [disabled]):hover {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
     transform : translate3d(0, 2px, 0);
   }
 
   &:focus {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  }
+
+  &[disabled] {
+    cursor : not-allowed;
+    opacity: 0.5;
   }
 }
 
@@ -156,6 +161,11 @@ input[type="checkbox"] {
     font-size: 1.2rem;
     color    : #333;
   }
+}
+
+// Hide game section while instructions are shown
+[data-section="info"]+[data-section="game"] {
+  display: none;
 }
 
 .uppercase {
@@ -334,30 +344,17 @@ input[type="checkbox"] {
   font-size: 2rem;
 }
 
+.btn-lg {
+  font-size: 1.5rem;
+  padding  : 1rem 2rem;
+}
+
 .pointer {
   cursor: pointer;
 }
 
 .relative {
   position: relative;
-}
-
-.close-button {
-  color    : var(--second-color);
-  position : absolute;
-  top      : 1rem;
-  right    : 1rem;
-  font-size: 3rem;
-
-  &:hover {
-    filter: contrast(0.8);
-  }
-
-  /* When screen is smaller than 600px adjust the position */
-  @media (max-width: 600px) {
-    top  : 0.5rem;
-    right: 0.5rem;
-  }
 }
 
 .branding {
