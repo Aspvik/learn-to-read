@@ -1,6 +1,10 @@
 {
   "language": "nb-NO",
   "type": "math",
+  "labels": {
+    "correct": "Riktig",
+    "incorrect": "Feil"
+  },
   "words": [
     "1 + 1",
     "1 + 2",
