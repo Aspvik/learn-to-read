@@ -57,8 +57,13 @@
         font-weight: bold;
       }
 
+      /* Hide if empty (no alternatives) */
       &:empty {
         display: none;
+
+        &+p {
+          display: none;
+        }
       }
     }
 
@@ -80,6 +85,6 @@
   <p>Poeng: <b id="points">0</b></p>
   <div class="controls">
     <button onclick="setNextWord()" class="uppercase">Neste</button>
-    <button onclick="speak()" class="uppercase"><i class="fa-sharp fa-solid fa-volume-high"></i></button>
+    <button onclick="speak(dqs('#word').textContent)" class="uppercase"><i class="fa-sharp fa-solid fa-volume-high"></i></button>
   </div>
 </div>
