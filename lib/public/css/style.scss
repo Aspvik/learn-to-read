@@ -163,6 +163,11 @@ input[type="checkbox"] {
   }
 }
 
+// Hide game section while instructions are shown
+[data-section="info"]+[data-section="game"] {
+  display: none;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -339,30 +344,17 @@ input[type="checkbox"] {
   font-size: 2rem;
 }
 
+.btn-lg {
+  font-size: 1.5rem;
+  padding  : 1rem 2rem;
+}
+
 .pointer {
   cursor: pointer;
 }
 
 .relative {
   position: relative;
-}
-
-.close-button {
-  color    : var(--second-color);
-  position : absolute;
-  top      : 1rem;
-  right    : 1rem;
-  font-size: 3rem;
-
-  &:hover {
-    filter: contrast(0.8);
-  }
-
-  /* When screen is smaller than 600px adjust the position */
-  @media (max-width: 600px) {
-    top  : 0.5rem;
-    right: 0.5rem;
-  }
 }
 
 .branding {
