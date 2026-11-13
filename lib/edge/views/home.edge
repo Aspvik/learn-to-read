@@ -1,10 +1,35 @@
 {{-- Use the layout component and pass data --}}
 @component('components/layouts/main', {})
 
+<style>
+  .start-button {
+    background-color: var(--bg-headfoot-color);
+    border-color: var(--bg-headfoot-color);
+    color: var(--bg-headfoot-text);
+    font-weight: bold;
+  }
+
+  .start-button:focus-visible {
+    outline: 3px solid var(--bg-headfoot-color);
+    outline-offset: 3px;
+  }
+
+  .audio-help {
+    margin-top: auto;
+    padding-block: 1rem;
+    color: #425b5f;
+    font-size: .875rem;
+    text-align: center;
+  }
+</style>
+
 {{-- Main slot (unnamed) --}}
 <section class="text-center relative bg-accent" data-section="info">
   <div class="mw-800 mx-auto">
     <h1 class="text-xlg">Velkommen til Ordmester.no 😎</h1>
+    <button class="start-button uppercase btn-lg mt-3 mb-3"
+            onclick="window.warmUpSpeech?.(); this.closest('[data-section=info]').remove()"
+            title="Klikk for å starte spillet">Start</button>
     <p class="text-lg">
       <b>Vil du bli en ordmester?</b>
       Les ordene høyt. Trykk så på høyttaleren for å høre ordene opplest.
@@ -13,13 +38,12 @@
     <p class="text-lg mt-2">Fra menyen kan du velge hvilken ordliste du vil bruke, velg mellom matematikk, norske ord, engelsk ord og mange andre.</p>
     <p class="text-lg mt-2">PS! Du kan også trykke på en bokstav eller et tall for å høre hva den heter.</p>
   </div>
-  <button class="uppercase btn-lg mt-3"
-          onclick="this.parentElement.remove()"
-          title="Klikk for å starte spillet">Start</button>
 </section>
 
 <section data-section="game">
   @include('partials/reader')
 </section>
+
+<p class="audio-help">Ingen lyd? Slå av stillemodus og sjekk volumet.</p>
 
 @end
