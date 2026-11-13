@@ -1,3 +1,22 @@
 <footer>
-  <p>©2024 Rune Aspvik</p>
+  <p>© 2026 Rune Aspvik <span aria-hidden="true">|</span> <button id="settings-open" class="settings-link" type="button" aria-haspopup="dialog" aria-controls="settings-dialog">Innstillinger</button></p>
 </footer>
+
+<dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title">
+  <h2 id="settings-title">Innstillinger</h2>
+  <p>Velg stemmene du vil høre når ordene leses opp.</p>
+
+  <div class="settings-field">
+    <label for="norwegian-voice">Norsk stemme</label>
+    <select id="norwegian-voice"><option value="">Standard</option></select>
+  </div>
+
+  <div class="settings-field">
+    <label for="english-voice">Engelsk stemme</label>
+    <select id="english-voice"><option value="">Standard</option></select>
+  </div>
+
+  <form method="dialog" class="settings-actions">
+    <button type="submit">Lukk</button>
+  </form>
+</dialog>
